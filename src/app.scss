@@ -8,3 +8,31 @@
   justify-content: center;
   align-items: center;
 }
+
+.one-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.split-40-60 {
+  div:first-child {
+    flex: 0 0 40%;
+  }
+
+  div:nth-child(2) {
+    flex: 0 0 60%;
+  }
+}
+
+.border-bottom {
+  border-bottom: 2px double black;
+}
+
+.border-right {
+  border-right: 2px double black;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
