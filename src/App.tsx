@@ -13,8 +13,6 @@ interface AppProps {
 }
 
 export const App: React.FC<AppProps> = observer(({ appState }) => {
-  appState.logger.print('App render');
-
   return (
     <div className='full-size center-content'>
       <div className='full-size one-row'>
@@ -25,9 +23,7 @@ export const App: React.FC<AppProps> = observer(({ appState }) => {
           <div className='flex-40 border-bottom'>
             <Controls appState={appState} />
           </div>
-          <div className='flex-60'>
-            <OutputLog logger={appState.logger} />
-          </div>
+          <div className='flex-60'></div>
         </div>
       </div>
     </div>
