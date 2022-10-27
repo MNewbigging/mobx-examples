@@ -33,6 +33,7 @@
 .list {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .bold {
@@ -41,4 +42,8 @@
 
 .pad15 {
   padding: 15px;
+}
+
+.gap15 {
+  gap: 15px;
 }

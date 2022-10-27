@@ -1,7 +1,27 @@
 import './list.scss';
 
 import React from 'react';
+import { ListState } from '../../state/ListState';
+import { observer } from 'mobx-react-lite';
+import { ListItem } from '../list-item/ListItem';
 
-export const List: React.FC = () => {
-  return <div className='full-size list'></div>;
-};
+interface ListProps {
+  listState: ListState;
+}
+
+export const List: React.FC<ListProps> = observer(({ listState }) => {
+  console.log('List render');
+
+  return (
+    <div className='full-size list pad15'>
+      {listState.items.map((item, index) => (
+        <ListItem
+          key={item.id}
+          item={item}
+          altBackground={index % 2 === 0}
+          onRemoveItem={listState.removeListItem}
+        />
+      ))}
+    </div>
+  );
+});

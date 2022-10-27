@@ -1,0 +1,16 @@
+.list-item {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .list-item-controls {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.alt-bg {
+  background-color: #e5e8eb;
+}
