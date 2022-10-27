@@ -5,7 +5,7 @@ import { observer } from 'mobx-react-lite';
 
 import { AppState } from './AppState';
 import { List } from './components/list/List';
-import { Controls } from './components/controls/Controls';
+import { FizzCounter } from './components/controls/FizzCounter';
 import { ColourClock } from './components/colour-clock/ColourClock';
 
 interface AppProps {
@@ -23,7 +23,7 @@ export const App: React.FC<AppProps> = observer(({ appState }) => {
         </div>
         <div className='flex-fill list'>
           <div className='flex-fill border-bottom'>
-            <Controls appState={appState} />
+            <FizzCounter fizzBuzzCounter={appState.fizzBuzzCounter} />
           </div>
           <div className='flex-fill'>
             <ColourClock colourClockState={appState.colourClockState} />
