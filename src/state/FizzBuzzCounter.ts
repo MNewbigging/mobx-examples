@@ -1,4 +1,13 @@
-import { action, computed, makeAutoObservable, makeObservable, observable, reaction } from 'mobx';
+import {
+  action,
+  autorun,
+  computed,
+  makeAutoObservable,
+  makeObservable,
+  observable,
+  reaction,
+  when,
+} from 'mobx';
 
 export class FizzBuzzCounter {
   public count = 0;
@@ -12,7 +21,14 @@ export class FizzBuzzCounter {
       isFizz: computed,
     });
 
+    //autorun(this.onAnyChange);
     reaction(() => this.count, this.setFizzBuzzString);
+
+    // When the first argument returns true, the second argument is called - once only
+    // when(
+    //   () => this.fizzBuzzString === 'fizz',
+    //   () => console.log('when fizz!')
+    // );
   }
 
   incrementCount = () => {
@@ -25,8 +41,14 @@ export class FizzBuzzCounter {
     return this.fizzBuzzString === 'fizz';
   }
 
-  // Reaction re-runs on a specific field - count
+  // Reaction runs whenever a specific observable field changes
   setFizzBuzzString = () => {
     this.fizzBuzzString = this.count % 5 === 0 ? 'fizz' : 'buzz';
+  };
+
+  // Autorun runs whenever any referenced observable changes
+  onAnyChange = () => {
+    const someString = this.count + this.fizzBuzzString;
+    console.log('autorun');
   };
 }
