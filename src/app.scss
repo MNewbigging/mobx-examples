@@ -14,14 +14,12 @@
   flex-wrap: nowrap;
 }
 
-.split-40-60 {
-  div:first-child {
-    flex: 0 0 40%;
-  }
+.flex-40 {
+  flex: 0 0 40%;
+}
 
-  div:nth-child(2) {
-    flex: 0 0 60%;
-  }
+.flex-60 {
+  flex: 0 0 60%;
 }
 
 .border-bottom {
@@ -35,4 +33,12 @@
 .list {
   display: flex;
   flex-direction: column;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.pad15 {
+  padding: 15px;
 }
