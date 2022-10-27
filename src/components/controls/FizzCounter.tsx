@@ -10,7 +10,7 @@ interface FizzCounterProps {
 }
 
 export const FizzCounter: React.FC<FizzCounterProps> = observer(({ fizzBuzzCounter }) => {
-  console.log('Controls render');
+  console.log('FizzCounter render');
 
   return (
     <div className='full-size center-content gap15 list'>
@@ -19,6 +19,9 @@ export const FizzCounter: React.FC<FizzCounterProps> = observer(({ fizzBuzzCount
       </Observer> */}
 
       <button onClick={fizzBuzzCounter.incrementCount}>Count: {fizzBuzzCounter.count}</button>
+
+      {/* <div>{fizzBuzzCounter.fizzBuzzString}</div>
+      <div>isFizz {fizzBuzzCounter.isFizz.toString()}</div> */}
     </div>
   );
 });
