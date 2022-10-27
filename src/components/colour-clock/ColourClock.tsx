@@ -10,7 +10,10 @@ interface ColourClockProps {
 
 export const ColourClock: React.FC<ColourClockProps> = observer(({ colourClockState }) => {
   return (
-    <div className='colour-clock' style={{ backgroundColor: `${colourClockState.time}` }}>
+    <div
+      className='colour-clock full-size center-content'
+      style={{ backgroundColor: `${colourClockState.time}` }}
+    >
       {colourClockState.time}
     </div>
   );
