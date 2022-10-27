@@ -13,7 +13,12 @@ export const List: React.FC<ListProps> = observer(({ listState }) => {
   console.log('List render');
 
   return (
-    <div className='full-size list pad15'>
+    <div className='full-size list pad15 gap15'>
+      <div className='list-banner'>
+        <div>Showing {listState.items.length} items</div>
+        <button onClick={listState.addListItem}>Add list item</button>
+      </div>
+
       {listState.items.map((item, index) => (
         <ListItem
           key={item.id}

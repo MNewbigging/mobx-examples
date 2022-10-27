@@ -18,8 +18,6 @@ export const Controls: React.FC<ControlsProps> = observer(({ appState }) => {
       </Observer> */}
 
       <button onClick={appState.incrementCount}>Count: {appState.count}</button>
-
-      <button onClick={appState.listState.addListItem}>Add list item</button>
     </div>
   );
 });

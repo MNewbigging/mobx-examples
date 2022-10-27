@@ -22,6 +22,10 @@
   flex: 0 0 60%;
 }
 
+.flex-fill {
+  flex: 1 1 auto;
+}
+
 .border-bottom {
   border-bottom: 2px double black;
 }
@@ -46,4 +50,8 @@
 
 .gap15 {
   gap: 15px;
+}
+
+.list-wrapper {
+  flex: 0 0 30%;
 }

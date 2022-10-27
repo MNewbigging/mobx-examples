@@ -17,10 +17,10 @@ export const App: React.FC<AppProps> = observer(({ appState }) => {
   return (
     <div className='full-size center-content'>
       <div className='full-size one-row'>
-        <div className='flex-40 border-right'>
+        <div className='list-wrapper border-right'>
           <List listState={appState.listState} />
         </div>
-        <div className='flex-60 list'>
+        <div className='flex-fill list'>
           <div className='flex-40 border-bottom'>
             <Controls appState={appState} />
           </div>

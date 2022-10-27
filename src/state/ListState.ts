@@ -11,6 +11,7 @@ export class ListState {
     makeObservable(this, {
       items: observable,
       addListItem: action,
+      removeListItem: action,
     });
 
     [1, 2, 3, 4].forEach(() => this.addListItem());
@@ -26,6 +27,8 @@ export class ListState {
     // const toRemove = this.items.findIndex((item) => item.id === id);
     // this.items.splice(toRemove, 1);
   };
+
+  moveItemUp = (id: string) => {};
 
   private createId(length: number = 4) {
     const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV0123456789';
