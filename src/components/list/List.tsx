@@ -9,6 +9,7 @@ interface ListProps {
   listState: ListState;
 }
 
+// This comp will re-render if any observable state it references is changed
 export const List: React.FC<ListProps> = observer(({ listState }) => {
   console.log('List render');
 

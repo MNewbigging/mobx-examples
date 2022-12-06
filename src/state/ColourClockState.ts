@@ -4,6 +4,7 @@ export class ColourClockState {
   @observable public time = '';
 
   constructor() {
+    // Looks for decorators to apply reactive behaviour to properties
     makeAutoObservable(this);
 
     setInterval(this.getColourTime, 1000);

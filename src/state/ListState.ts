@@ -8,9 +8,10 @@ export class ListState {
   items: IListItem[] = [];
 
   constructor() {
+    // Tell MobX which properties are reactive state
     makeObservable(this, {
-      items: observable,
-      addListItem: action,
+      items: observable, // will re-render any observers that reference this when this changes
+      addListItem: action, // action = a function that changes observable properties
       removeListItem: action,
       refreshListItem: action,
     });
@@ -25,8 +26,8 @@ export class ListState {
   removeListItem = (id: string) => {
     this.items = this.items.filter((item) => item.id !== id);
 
-    // const toRemove = this.items.findIndex((item) => item.id === id);
-    // this.items.splice(toRemove, 1);
+    //const toRemove = this.items.findIndex((item) => item.id === id);
+    //this.items.splice(toRemove, 1);
   };
 
   refreshListItem = (id: string) => {

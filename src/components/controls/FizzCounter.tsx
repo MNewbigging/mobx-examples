@@ -20,8 +20,8 @@ export const FizzCounter: React.FC<FizzCounterProps> = observer(({ fizzBuzzCount
 
       <button onClick={fizzBuzzCounter.incrementCount}>Count: {fizzBuzzCounter.count}</button>
 
-      {/* <div>{fizzBuzzCounter.fizzBuzzString}</div>
-      <div>isFizz {fizzBuzzCounter.isFizz.toString()}</div> */}
+      <div>{fizzBuzzCounter.fizzBuzzString}</div>
+      <div>isFizz: {fizzBuzzCounter.isFizz.toString()}</div>
     </div>
   );
 });
