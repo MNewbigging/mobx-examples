@@ -26,7 +26,7 @@ export const List: React.FC<ListProps> = observer(({ listState }) => {
           item={item}
           altBackground={index % 2 === 0}
           onRemoveItem={listState.removeListItem}
-          onRefreshItem={listState.refreshListItem}
+          onRefreshItem={listState.newItemId}
         />
       ))}
     </div>

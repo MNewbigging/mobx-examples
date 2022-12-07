@@ -2,6 +2,14 @@ import { action, makeAutoObservable, observable } from 'mobx';
 
 export class ColourClockState {
   @observable public time = '';
+  /*
+  // time = 'something'
+
+  // public time = new BehaviorSubject<string>('');
+  // time.next('');
+  // time.getValue();
+  // time.asObservable();
+  */
 
   constructor() {
     // Looks for decorators to apply reactive behaviour to properties

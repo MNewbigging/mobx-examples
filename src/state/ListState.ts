@@ -13,7 +13,7 @@ export class ListState {
       items: observable, // will re-render any observers that reference this when this changes
       addListItem: action, // action = a function that changes observable properties
       removeListItem: action,
-      refreshListItem: action,
+      newItemId: action,
     });
 
     [1, 2, 3, 4].forEach(() => this.addListItem());
@@ -30,7 +30,7 @@ export class ListState {
     //this.items.splice(toRemove, 1);
   };
 
-  refreshListItem = (id: string) => {
+  newItemId = (id: string) => {
     const item = this.items.find((item) => item.id === id);
 
     item.id = this.createId();

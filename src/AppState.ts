@@ -8,3 +8,16 @@ export class AppState {
   public listState = new ListState();
   public colourClockState = new ColourClockState();
 }
+
+/**
+ * MobX Keywords:
+ *
+ * - OBSERVABLE
+ * - ACTION
+ * - OBSERVER
+ * - COMPUTED
+ *
+ * - AUTORUN
+ * - REACTION
+ * - WHEN
+ */

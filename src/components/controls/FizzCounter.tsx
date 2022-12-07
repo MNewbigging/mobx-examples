@@ -14,13 +14,16 @@ export const FizzCounter: React.FC<FizzCounterProps> = observer(({ fizzBuzzCount
 
   return (
     <div className='full-size center-content gap15 list'>
+      {/* This prevents the whole comp from re-rendering when count is changed */}
       {/* <Observer>
-        {() => <button onClick={appState.incrementCount}>Count: {appState.count}</button>}
+        {() => (
+          <button onClick={fizzBuzzCounter.incrementCount}>Count: {fizzBuzzCounter.count}</button>
+        )}
       </Observer> */}
 
       <button onClick={fizzBuzzCounter.incrementCount}>Count: {fizzBuzzCounter.count}</button>
 
-      <div>{fizzBuzzCounter.fizzBuzzString}</div>
+      {/* <div>{fizzBuzzCounter.fizzBuzzString}</div> */}
       <div>isFizz: {fizzBuzzCounter.isFizz.toString()}</div>
     </div>
   );

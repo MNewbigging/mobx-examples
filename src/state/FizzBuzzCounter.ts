@@ -25,19 +25,19 @@ export class FizzBuzzCounter {
     reaction(() => this.count, this.setFizzBuzzString);
 
     // When the first argument returns true, the second argument is called - once only
-    // when(
-    //   () => this.fizzBuzzString === 'fizz',
-    //   () => console.log('when fizz!')
-    // );
+    when(
+      () => this.fizzBuzzString === 'fizz',
+      () => console.log('when fizz!')
+    );
   }
 
   incrementCount = () => {
     this.count++;
   };
 
-  // Computed cahces its return value and only reruns when a referenced observable changes
+  // Computed caches its return value and only reruns when a referenced observable changes
   get isFizz() {
-    //console.log('isFizz');
+    console.log('isFizz');
     return this.fizzBuzzString === 'fizz';
   }
 
